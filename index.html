@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meser – Copy-Trading mit Ultima</title>
+<meta property="og:title" content="Meser – Copy-Trading mit Ultima"><meta property="og:description" content="Copy-Trading mit Ultima UMSOCIAL"><meta name="theme-color" content="#0b1020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235b9dff'/%3E%3Cpath d='M6 22l7-8 5 4 8-10' stroke='%2306101f' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<meta name="description" content="Copy-Trading mit Ultima UMSOCIAL: Strategien, Tutorials und persönliche Betreuung.">
+<style>
+:root{--bg:#0b1020;--s:#121a30;--l:#232d4a;--t:#e8ecf8;--m:#8b97b8;--a:#5b9dff;--g:#4ade9b;--r:#ff6b7a}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--t);font:16px/1.6 system-ui,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}.w{max-width:1040px;margin:0 auto;padding:0 20px}.m{color:var(--m)}.s{font-size:13px}
+header{position:sticky;top:0;z-index:5;background:#0b1020ea;backdrop-filter:blur(8px);border-bottom:1px solid var(--l)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.br{font-weight:800;letter-spacing:-.02em}.lg button{background:none;border:0;color:var(--m);font:inherit;font-size:14px;padding:6px 8px;cursor:pointer}.lg .on{color:var(--t);font-weight:700}
+section{padding:72px 0}h1{font-size:clamp(36px,6vw,62px);line-height:1.04;letter-spacing:-.035em;max-width:14ch}
+h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.02em;margin-bottom:28px}h3{font-size:20px}
+.hero{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}.hero p.sub{font-size:19px;color:var(--m);max-width:46ch;margin:20px 0 28px}
+.ph{width:200px;height:200px;border-radius:50%;background:linear-gradient(135deg,#1c2a52,#0f1730);border:1px solid var(--l);display:grid;place-items:center;font-size:72px;font-weight:800;color:var(--a);overflow:hidden}.ph img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-block;background:var(--a);color:#06101f;font:inherit;font-weight:700;padding:12px 22px;border-radius:10px;text-decoration:none;border:1px solid var(--a);cursor:pointer}.btn.o{background:none;color:var(--t);border-color:var(--l)}.btn.sm{padding:7px 14px;font-size:14px}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.card{background:var(--s);border:1px solid var(--l);border-radius:14px;padding:24px}.g{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.st{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:36px}.st b{color:var(--a);font-size:28px;display:block;line-height:1.2}
+.top{display:flex;justify-content:space-between;gap:10px;margin-bottom:16px}.tag{font-size:12px;color:#f2c46b;border:1px solid #f2c46b66;border-radius:6px;padding:2px 8px;height:fit-content}
+.tabs{display:flex;gap:4px;background:#0b1020;border-radius:9px;padding:3px;width:fit-content}.tabs button{background:none;border:0;color:var(--m);font:inherit;font-size:14px;padding:5px 12px;border-radius:7px;cursor:pointer}.tabs .on{background:var(--l);color:var(--t)}
+.big{font-size:44px;font-weight:800;letter-spacing:-.03em;margin:14px 0 0;font-variant-numeric:tabular-nums}.up{color:var(--g)}.dn{color:var(--r)}
+.ch{width:100%;height:auto;display:block;margin:8px 0}.ln{stroke-dasharray:1;stroke-dashoffset:1;animation:d .9s ease-out forwards}@keyframes d{to{stroke-dashoffset:0}}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px 8px;margin:14px 0 18px}.kv>div{border-top:1px solid var(--l);padding-top:8px}.roi{display:flex;align-items:baseline;gap:10px}.roi span{color:var(--m);font-size:14px}.cap{font-size:13px;color:var(--m);margin:14px 0 4px}.bar{width:100%;height:auto;display:block}.kv dt{font-size:13px;color:var(--m)}.kv dd{font-weight:700;font-variant-numeric:tabular-nums}
+.vid{aspect-ratio:16/9;background:#0b1020;border-radius:10px;display:grid;place-items:center;border:1px solid var(--l);cursor:pointer;color:var(--a);font-size:40px;width:100%;margin-bottom:12px}iframe{width:100%;height:100%;border:0;border-radius:10px}
+details{border-bottom:1px solid var(--l);padding:16px 0}summary{cursor:pointer;font-weight:600}details p{color:var(--m);margin-top:8px}
+.fin{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}.fin h2{margin-bottom:12px}.ct a{display:block;padding:8px 0;border-bottom:1px solid var(--l);text-decoration:none}
+footer{border-top:1px solid var(--l);padding:28px 0;color:var(--m);font-size:13px}footer a{margin-right:16px}
+#adm{position:fixed;inset:0 0 0 auto;width:min(480px,100%);background:#0d1428;border-left:1px solid var(--l);z-index:9;overflow:auto;padding:20px;display:none}#adm.open{display:block}
+#adm input,#adm textarea{width:100%;background:#0b1020;border:1px solid var(--l);color:var(--t);border-radius:7px;padding:7px 9px;font:inherit;font-size:14px;margin:3px 0}#adm label{font-size:12px;color:var(--m)}
+.f{margin:6px 0}.f .f{margin-left:12px;padding-left:10px;border-left:1px solid var(--l)}.it{position:relative;padding-right:30px}.it>button{position:absolute;right:0;top:0}#adm button{background:var(--l);color:var(--t);border:0;border-radius:6px;padding:5px 10px;cursor:pointer}
+@media(max-width:700px){.hero,.fin{grid-template-columns:1fr}.ph{width:120px;height:120px;font-size:44px}section{padding:48px 0}}
+@media(prefers-reduced-motion:reduce){.ln{animation:none;stroke-dashoffset:0}}
+</style></head><body>
+<header><div class="w"><span class="br" id="brand"></span><div style="display:flex;align-items:center;gap:8px"><span class="lg" id="lg"></span><a class="btn sm" id="hreg" target="_blank" rel="noopener"></a></div></div></header>
+<main id="app"></main>
+<aside id="adm"></aside>
+<script>
+const LI={ru:0,en:1,de:2},L=(a,b,c)=>({ru:a,en:b,de:c}),PER=['1M','3M','6M','1Y','ALL'];
+const mk=(r,n,w,f)=>({ret:r,dd:+(r*.35).toFixed(1),win:w,pf:f,trades:n,series:[0,.18,.12,.4,.33,.62,.55,.8,.74,1].map(x=>+(x*r).toFixed(1))});
+const T={
+reg:['Регистрация','Register','Registrieren'],cont:['Контакты','Contact','Kontakt'],demo:['Демо-данные','Demo data','Demo-Daten'],dd:['Макс. просадка','Max. drawdown','Max. Drawdown'],risk:['Риск','Risk','Risiko'],cop:['Копируют','Copiers','Kopierer'],
+prof:['Профиль в UMSOCIAL','Profile on UMSOCIAL','Profil bei UMSOCIAL'],upd:['Обновлено','Updated','Aktualisiert'],a:['Что происходит на Ultima','What is happening on Ultima','Das passiert bei Ultima'],
+tr:['Трейдеры, которых я рекомендую','Traders I recommend','Trader, die ich empfehle'],tu:['Туториалы','Tutorials','Tutorials'],faq:['Частые вопросы','FAQ','Häufige Fragen'],soon:['Скоро','Coming soon','Demnächst'],
+news:['Новости платформы','Platform news','Neuigkeiten'],ad:['Реферальная ссылка: регистрируясь по ней, вы поддерживаете автора сайта.','Referral link: registering through it supports the site owner.','Werbelink (Empfehlung): Mit Ihrer Registrierung darüber unterstützen Sie den Seitenbetreiber.'],
+w:['Торговля CFD связана с высоким риском потери капитала. Прошлые результаты не гарантируют будущих. Не является инвестиционной рекомендацией.','Trading CFDs carries a high risk of losing capital. Past performance does not guarantee future results. This is not investment advice.','Der Handel mit CFDs ist mit einem hohen Verlustrisiko verbunden. Vergangene Ergebnisse garantieren keine zukünftigen. Keine Anlageberatung.'],
+roi:['ROI за период','ROI for period','ROI im Zeitraum'],win:['Доля прибыльных','Win rate','Trefferquote'],pf:['Профит-фактор','Profit factor','Profit-Faktor'],tr_n:['Сделок','Trades','Trades'],aum:['Под копированием','Copied capital','Kopiertes Kapital'],min:['Мин. депозит','Min. deposit','Min. Einlage'],fee:['Комиссия трейдера','Performance fee','Erfolgsgebühr'],since:['На платформе с','On platform since','Auf Plattform seit'],mon:['Доходность по месяцам','Monthly returns','Monatsrenditen'],me:['Обо мне','About me','Über mich'],imp:['Импрессум','Impressum','Impressum'],dat:['Конфиденциальность','Datenschutz','Datenschutz']};
+const D0={
+owner:{name:'Vasilij Meser',photo:'',bio:L('Здесь короткий рассказ о трейдере: опыт, подход к рискам, почему он работает с этими стратегиями.','A short story about the trader: experience, approach to risk, why these strategies.','Kurze Vorstellung: Erfahrung, Umgang mit Risiko, warum diese Strategien.'),role:L('Трейдер, помогаю начать с копитрейдингом','Trader, helping you start with copy trading','Trader, begleitet Einsteiger im Copy-Trading')},
+hero:{title:L('Копитрейдинг на Ultima — просто','Copy trading on Ultima, made simple','Copy-Trading bei Ultima – einfach erklärt'),sub:L('Покажу, как работает UMSOCIAL, помогу выбрать стратегию и подключиться.','I show how UMSOCIAL works, help you pick a strategy and get connected.','Ich zeige, wie UMSOCIAL funktioniert, und helfe bei Auswahl und Einrichtung.')},
+about:{intro:L('UMSOCIAL — платформа Ultima Markets: вы выбираете стратегию трейдера, и его сделки автоматически повторяются на вашем счёте.','UMSOCIAL is the Ultima Markets platform: you pick a trader’s strategy and its trades are mirrored on your account automatically.','UMSOCIAL ist die Plattform von Ultima Markets: Sie wählen eine Strategie, und deren Trades werden automatisch auf Ihrem Konto gespiegelt.'),
+steps:[{t:L('Откройте счёт','Open an account','Konto eröffnen'),d:L('Регистрация по ссылке внизу страницы.','Register via the link at the bottom of the page.','Registrierung über den Link am Seitenende.')},{t:L('Выберите стратегию','Choose a strategy','Strategie wählen'),d:L('Сравните доходность, просадку и риск.','Compare return, drawdown and risk.','Rendite, Drawdown und Risiko vergleichen.')},{t:L('Подключите копирование','Start copying','Kopieren starten'),d:L('Задайте сумму и лимиты, дальше всё идёт автоматически.','Set amount and limits; the rest runs automatically.','Betrag und Limits festlegen, der Rest läuft automatisch.')}]},
+traders:[
+{name:'Trader A',link:'https://',style:L('Консервативный, золото и индексы','Conservative, gold and indices','Konservativ, Gold und Indizes'),risk:'3/10',copiers:128,aum:'$250k',minDep:'$500',fee:'20%',since:'2024-03',feed:'',demo:true,updated:'—',monthly:[1.2,-0.4,2.1,0.9,1.8,-0.6,2.4,1.1,0.8,1.9,-0.2,2.2],data:{'1M':mk(2.1,18,66,1.7),'3M':mk(6.4,52,66,1.7),'6M':mk(12.8,104,65,1.6),'1Y':mk(24.5,210,64,1.6),'ALL':mk(41.2,380,64,1.6)}},
+{name:'Trader B',link:'https://',style:L('Агрессивный, форекс и крипто','Aggressive, forex and crypto','Aggressiv, Forex und Krypto'),risk:'8/10',copiers:341,aum:'$1.1M',minDep:'$1000',fee:'30%',since:'2023-06',feed:'',demo:true,updated:'—',monthly:[4.1,-3.2,6.8,2.4,-2.9,7.5,3.3,-1.8,5.9,4.4,-3.6,6.2],data:{'1M':mk(7.9,40,58,1.9),'3M':mk(18.2,120,58,1.9),'6M':mk(35.6,250,57,1.8),'1Y':mk(71.3,520,57,1.8),'ALL':mk(128.4,980,56,1.8)}}],
+tutorials:[{title:L('Как зарегистрироваться','How to register','So registrieren Sie sich'),yt:''},{title:L('Как подключить копирование','How to start copying','So starten Sie das Kopieren'),yt:''}],
+faq:[{q:L('Сколько нужно денег для старта?','How much do I need to start?','Wie viel Kapital brauche ich?'),a:L('Минимальный депозит зависит от стратегии — смотрите на её странице.','The minimum deposit depends on the strategy; see its page.','Der Mindestbetrag hängt von der Strategie ab – siehe deren Seite.')}],
+ref:{url:'https://',title:L('Готовы начать?','Ready to start?','Bereit zum Start?'),text:L('Регистрация занимает несколько минут.','Registration takes a few minutes.','Die Registrierung dauert wenige Minuten.')},
+contact:{telegram:'username',whatsapp:'491700000000',email:'info@example.de'}};
+let C=D0,lang='de',P=[];
+try{const n=localStorage.lang||navigator.language.slice(0,2);if(n in LI)lang=n}catch(e){}
+const $=s=>document.querySelector(s),t=o=>o?o[lang]||o.en||'':'',u=k=>T[k][LI[lang]];
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function chart(s,up){const w=600,h=170,c=up?'#4ade9b':'#ff6b7a',mn=Math.min(0,...s),mx=Math.max(0,...s),y=v=>h-14-(v-mn)/((mx-mn)||1)*(h-28),q=s.map((v,i)=>[i*w/(s.length-1),y(v)]),p=q.map(a=>a[0].toFixed(1)+','+a[1].toFixed(1)).join(' '),z=y(0);
+return `<svg class="ch" viewBox="0 0 ${w} ${h}" role="img" aria-label="Equity"><defs><linearGradient id="f${up?1:0}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".28"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs><line x1="0" x2="${w}" y1="${z}" y2="${z}" stroke="#232d4a" stroke-dasharray="4 4"/><text x="4" y="${z-5}" fill="#8b97b8" font-size="11">0%</text><polygon points="0,${z} ${p} ${w},${z}" fill="url(#f${up?1:0})"/><polyline class="ln" pathLength="1" points="${p}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"/>${q.map((a,i)=>`<circle cx="${a[0]}" cy="${a[1]}" r="9" fill="transparent"><title>${s[i]>0?'+':''}${s[i]}%</title></circle>`).join('')}</svg>`}
+function bars(m){const w=600,h=80,mx=Math.max(1,...m.map(Math.abs)),bw=w/m.length;return `<svg class="bar" viewBox="0 0 ${w} ${h}" role="img" aria-label="Monthly">${m.map((v,i)=>{const e=Math.abs(v)/mx*(h/2-4);return `<rect x="${(i*bw+bw*.15).toFixed(1)}" y="${v>=0?h/2-e:h/2}" width="${(bw*.7).toFixed(1)}" height="${e.toFixed(1)}" rx="2" fill="${v>=0?'#4ade9b':'#ff6b7a'}"><title>${v>0?'+':''}${v}%</title></rect>`}).join('')}<line x1="0" x2="${w}" y1="${h/2}" y2="${h/2}" stroke="#232d4a"/></svg>`}
+function card(x,i){const p=P[i]||'3M',d=x.data[p]||Object.values(x.data)[0],up=d.ret>=0,f=v=>esc(v)||'—',pc=v=>v==null?'—':v+'%',k=(a,b)=>`<div><dt>${u(a)}</dt><dd>${b}</dd></div>`,mo=(x.monthly||[]).slice(-({'1M':6,'3M':6,'6M':6}[p]||12));
+return `<article class="card"><div class="top"><div><h3>${esc(x.name)}</h3><p class="m">${esc(t(x.style))}</p></div>${x.demo?`<span class="tag">${u('demo')}</span>`:''}</div>
+<div class="tabs">${PER.map(k=>`<button class="${k==p?'on':''}" onclick="setP(${i},'${k}')">${k}</button>`).join('')}</div>
+<div class="roi"><div class="big ${up?'up':'dn'}">${up?'+':''}${d.ret}%</div><span>${u('roi')}</span></div>${chart(d.series,up)}
+${mo.length?`<p class="cap">${u('mon')}</p>${bars(mo)}`:''}
+<dl class="kv">${k('dd',pc(d.dd))}${k('win',pc(d.win))}${k('pf',f(d.pf))}${k('tr_n',f(d.trades))}${k('risk',f(x.risk))}${k('cop',f(x.copiers))}${k('aum',f(x.aum))}${k('min',f(x.minDep))}${k('fee',f(x.fee))}${k('since',f(x.since))}</dl>
+<a class="btn o sm" href="${esc(x.link)}" target="_blank" rel="noopener">${u('prof')}</a> <span class="m s">${u('upd')}: ${esc(x.updated)}</span></article>`}
+function setP(i,k){P[i]=k;$('#tr').innerHTML=C.traders.map(card).join('')}
+function play(el,id){if(id)el.outerHTML=`<div class="vid" style="cursor:default"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1" allow="autoplay;fullscreen" allowfullscreen title="Video"></iframe></div>`}
+function render(){const o=C.owner,c=C.contact,a=C.about,r=C.ref;document.documentElement.lang=lang;
+$('#brand').textContent=o.name;$('#hreg').textContent=u('reg');$('#hreg').href=r.url;
+$('#lg').innerHTML=Object.keys(LI).map(k=>`<button class="${k==lang?'on':''}" onclick="setL('${k}')">${k.toUpperCase()}</button>`).join('');
+$('#app').innerHTML=`<section><div class="w hero"><div><h1>${esc(t(C.hero.title))}</h1><p class="sub">${esc(t(C.hero.sub))}</p><a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">${u('reg')}</a> <a class="btn o" href="#fin">${u('cont')}</a></div><div class="ph">${o.photo?`<img src="${esc(o.photo)}" alt="${esc(o.name)}">`:esc(o.name[0])}</div></div></section>
+<section id="me"><div class="w"><h2>${u('me')}</h2><p style="max-width:62ch">${esc(t(o.bio))}</p></div></section>
+<section id="about"><div class="w"><h2>${u('a')}</h2><p style="max-width:62ch;margin-bottom:32px">${esc(t(a.intro))}</p><div class="st">${a.steps.map((s,i)=>`<div class="card"><b>${i+1}</b><h3>${esc(t(s.t))}</h3><p class="m">${esc(t(s.d))}</p></div>`).join('')}</div>
+</div></section>
+<section id="traders"><div class="w"><h2>${u('tr')}</h2><div class="g" id="tr">${C.traders.map(card).join('')}</div></div></section>
+<section id="tut"><div class="w"><h2>${u('tu')}</h2><div class="g">${C.tutorials.map(v=>`<div><div class="vid" ${v.yt?`onclick="play(this,'${esc(v.yt)}')" role="button" tabindex="0"`:''}>${v.yt?'▶':`<span class="m" style="font-size:15px">${u('soon')}</span>`}</div><b>${esc(t(v.title))}</b></div>`).join('')}</div></div></section>
+<section id="faq"><div class="w"><h2>${u('faq')}</h2>${C.faq.map(f=>`<details><summary>${esc(t(f.q))}</summary><p>${esc(t(f.a))}</p></details>`).join('')}</div></section>
+<section id="fin"><div class="w fin"><div class="card"><h2>${esc(t(r.title))}</h2><p class="m" style="margin-bottom:20px">${esc(t(r.text))}</p><a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">${u('reg')}</a><p class="m s" style="margin-top:14px">${u('ad')}</p></div>
+<div class="ct"><h3 style="margin-bottom:8px">${u('cont')}</h3>${c.telegram?`<a href="https://t.me/${esc(c.telegram)}" target="_blank" rel="noopener">Telegram: @${esc(c.telegram)}</a>`:''}${c.whatsapp?`<a href="https://wa.me/${esc(c.whatsapp)}" target="_blank" rel="noopener">WhatsApp: +${esc(c.whatsapp)}</a>`:''}${c.email?`<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`:''}</div></div></section>
+<footer><div class="w"><p style="margin-bottom:12px">${u('w')}</p><a href="impressum.html">${u('imp')}</a><a href="datenschutz.html">${u('dat')}</a></div></footer>`}
+function setL(k){lang=k;try{localStorage.lang=k}catch(e){}render();if($('#adm').classList.contains('open'))adm()}
+/* admin: #admin in URL. Generic editor over the content object. */
+let DR;
+function ed(p,k,box){const v=p[k],w=document.createElement('div');w.className='f';const lb=document.createElement('label');lb.textContent=k;w.append(lb);
+if(Array.isArray(v)&&v.length&&v.every(x=>typeof x=='number')){const i=document.createElement('input');i.value=v.join(', ');i.oninput=()=>p[k]=i.value.split(',').map(z=>z.trim()).filter(z=>z!=='').map(Number).filter(z=>!isNaN(z));w.append(i)}
+else if(Array.isArray(v)){v.forEach((_,i)=>{const it=document.createElement('div');it.className='it';ed(v,i,it);const x=document.createElement('button');x.textContent='✕';x.onclick=()=>{v.splice(i,1);adm()};it.append(x);w.append(it)});
+const a=document.createElement('button');a.textContent='+';a.onclick=()=>{v.push(v.length?JSON.parse(JSON.stringify(v[v.length-1])):'');adm()};w.append(a)}
+else if(v&&typeof v=='object'){for(const kk in v)ed(v,kk,w)}
+else if(typeof v=='boolean'){const i=document.createElement('input');i.type='checkbox';i.checked=v;i.style.width='auto';i.onchange=()=>p[k]=i.checked;w.append(i)}
+else{const i=document.createElement(String(v).length>70?'textarea':'input');i.value=v;i.oninput=()=>p[k]=typeof v=='number'?+i.value:i.value;w.append(i)}
+box.append(w)}
+function adm(){const a=$('#adm'),pw=$('#pw')?.value||'';a.className='open';a.innerHTML='<h3>Admin</h3><label>Password</label><input id="pw" type="password"><p class="m s" id="msg"></p><button onclick="save()">Save</button> <button onclick="exp()">Export JSON</button> <button onclick="$(\'#adm\').className=\'\'">Close</button><hr style="border-color:var(--l);margin:14px 0">';
+$('#pw').value=pw;DR=DR||JSON.parse(JSON.stringify(C));for(const k in DR)ed(DR,k,a)}
+async function save(){try{const r=await fetch('api.php?action=save',{method:'POST',body:JSON.stringify({pass:$('#pw').value,content:DR})});if(!r.ok)throw 0;C=DR;DR=null;render();$('#msg').textContent='OK'}catch(e){$('#msg').textContent='Error: wrong password or api.php missing'}}
+function exp(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(DR,null,2)],{type:'application/json'}));a.download='content.json';a.click()}
+render();
+fetch('content.json').then(r=>r.ok?r.json():null).then(j=>{if(j){C=j;render()}}).catch(()=>{}).finally(()=>{
+fetch('api.php?action=stats').then(r=>r.ok?r.json():[]).then(s=>{let ch=0;s.forEach((d,i)=>{if(d&&C.traders[i]){if(d.monthly){C.traders[i].monthly=d.monthly;delete d.monthly}Object.assign(C.traders[i],{data:d,demo:false,updated:new Date().toISOString().slice(0,10)});ch=1}});if(ch)render()}).catch(()=>{})});
+if(location.hash=='#admin')adm();
+</script></body></html>
